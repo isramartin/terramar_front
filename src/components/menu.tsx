@@ -1,7 +1,6 @@
-// src/components/Menu.tsx
-
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import '../styles/menu.css'; // Asegúrate de que la ruta al archivo CSS sea correcta
 
 interface MenuProps {
   role: 'admin' | 'client' | null; // Permite que el rol sea null para los no logueados
@@ -29,17 +28,16 @@ export function Menu(props: MenuProps): JSX.Element {
           </>
         ) : (
           <>
-            
             {role === 'client' && (
               <>
-              <li><Link to="/home-client">Home Client</Link></li>
+                <li><Link to="/home-client">Home Client</Link></li>
                 <li><Link to="/view-orders">View Orders</Link></li>
                 <li><Link to="/account-settings">Account Settings</Link></li>
               </>
             )}
             {role === 'admin' && (
               <>
-              <li><Link to="/home-client">Home admin</Link></li>
+                <li><Link to="/home-admin">Home Admin</Link></li>
                 <li><Link to="/manage-users">Manage Users</Link></li>
                 <li><Link to="/view-reports">View Reports</Link></li>
               </>

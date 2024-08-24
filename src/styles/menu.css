@@ -1,0 +1,55 @@
+nav {
+    background-color: #2c3e50; /* Color de fondo de la barra de menú */
+    color: white; /* Color del texto */
+    position: fixed; /* Mantiene el menú en la parte superior de la página */
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que el menú ocupe el ancho completo */
+    z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+    padding: 10px 20px; /* Espaciado interno del menú */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Añade una sombra sutil para un efecto de profundidad */
+  }
+  
+  ul {
+    list-style-type: none; /* Quita los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Usa Flexbox para alinear los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos dentro del menú */
+    align-items: center; /* Alinea verticalmente los elementos */
+  }
+  
+  li {
+    margin: 0 15px; /* Espaciado entre los elementos de la lista */
+  }
+  
+  a {
+    color: white; /* Color del texto de los enlaces */
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    font-weight: bold; /* Hace que el texto sea negrita */
+    padding: 5px 10px; /* Espaciado interno de los enlaces */
+    border-radius: 5px; /* Redondea las esquinas de los enlaces */
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color de fondo */
+  }
+  
+  a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Añade un fondo sutil al pasar el ratón */
+    text-decoration: underline; /* Subraya el enlace al pasar el ratón por encima */
+  }
+  
+  button {
+    background-color: #e74c3c; /* Color de fondo del botón de logout */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin-left: 15px;
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    border-radius: 5px; /* Redondea las esquinas del botón */
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color de fondo */
+  }
+  
+  button:hover {
+    background-color: #c0392b; /* Cambia el color de fondo del botón al pasar el ratón */
+  }
+  

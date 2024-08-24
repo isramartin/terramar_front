@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Datos from '../assets/mockdata/Datos.json'; // Ajusta la ruta y el nombre del archivo
 import { Menu } from '../components/menu'; // Importa el componente Menu
+import '../styles/login.css';
 
 // Define la interfaz User para que coincida con la estructura del JSON
 interface User {
@@ -17,6 +18,7 @@ const users: User[] = Datos.users;
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
 
   const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
@@ -36,26 +38,42 @@ function Login() {
         navigate('/home-client');
       }
     } else {
+      setErrorMessage('Credenciales inválidas');
       console.error('Credenciales inválidas');
     }
   };
 
   return (
-    <div>
-      <Menu role={null} isLoggedIn={false} />
+   <div className="login-page">
+    <div className="login-container">
       <h1>Iniciar Sesión</h1>
+      {errorMessage && <p className="error-message">{errorMessage}</p>}
       <form onSubmit={handleLogin}>
-        <label>
+        <label className="label">
           Correo Electrónico:
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+          <input
+            type="email"
+            className="input-email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
         </label>
-        <label>
+        <label className="login-label">
           Contraseña:
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+          <input
+            type="password"
+            className="input-password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
         </label>
-        <button type="submit">Iniciar Sesión</button>
+        <button type="submit" className="submit-button">Iniciar Sesión</button>
       </form>
+      <a href="/register" className="register-link">Registrarse</a>
     </div>
+  </div>
   );
 }
 

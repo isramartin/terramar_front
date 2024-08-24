@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './views/login';
-import HomeClient from './views/homeClients';
+import HomeClient from './views/homeClient';
 import HomeAdmin from './views/homeAdmin';
 import './App.css';
 

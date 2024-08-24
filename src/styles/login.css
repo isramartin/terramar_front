@@ -1,0 +1,90 @@
+/* Estilos globales */
+.body-container, .html-container {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+  }
+  
+  .heading {
+    color: #333;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+  }
+  
+  /* Estilos para el contenedor del formulario */
+  .login-container {
+    background-color: #fff;
+    padding: 3%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  /* Estilos para los labels y inputs */
+  .label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .input-email,
+  .input-password {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Botón de submit */
+  .submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Estilo para mensajes de error */
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  /* Estilo del enlace de registro */
+  .register-link {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #4CAF50;
+    text-decoration: none;
+  }
+  
+  .register-link:hover {
+    text-decoration: underline;
+  }
+  
