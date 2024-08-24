@@ -1,0 +1,15 @@
+{
+    "users": [
+      { "id": 1, "email": "admin@1", "password": "adminpass", "role": "admin" },
+      { "id": 2, "email": "client@1", "password": "clientpass", "role": "client" }
+    ],
+    "products": [
+      { "id": 1, "name": "Producto 1", "price": 100, "description": "Descripción del producto 1" },
+      { "id": 2, "name": "Producto 2", "price": 200, "description": "Descripción del producto 2" }
+    ],
+    "orders": [
+      { "id": 1, "userId": 2, "productIds": [1], "status": "completed", "total": 100 },
+      { "id": 2, "userId": 2, "productIds": [2], "status": "pending", "total": 200 }
+    ]
+  }
+  
