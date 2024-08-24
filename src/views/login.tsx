@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Datos from '../assets/mockdata/Datos.json'; // Ajusta la ruta y el nombre del archivo
+import { Menu } from '../components/menu'; // Importa el componente Menu
 
 // Define la interfaz User para que coincida con la estructura del JSON
 interface User {
@@ -40,18 +41,21 @@ function Login() {
   };
 
   return (
-    <form onSubmit={handleLogin}>
+    <div>
+      <Menu role={null} isLoggedIn={false} />
       <h1>Iniciar Sesión</h1>
-      <label>
-        Correo Electrónico:
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-      </label>
-      <label>
-        Contraseña:
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-      </label>
-      <button type="submit">Iniciar Sesión</button>
-    </form>
+      <form onSubmit={handleLogin}>
+        <label>
+          Correo Electrónico:
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+        </label>
+        <label>
+          Contraseña:
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+        </label>
+        <button type="submit">Iniciar Sesión</button>
+      </form>
+    </div>
   );
 }
 

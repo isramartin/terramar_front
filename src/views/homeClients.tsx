@@ -1,32 +1,17 @@
 import React from 'react';
+import { Menu } from '../components/menu';
 
-function HomeClient() {
+export function HomeClient(): JSX.Element {
+  const user = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')!) : null;
+  const isLoggedIn = !!user;
+
   return (
-    <div className="home-client">
-      <h1>Home Cliente</h1>
-      <div className="product-list">
-        <div className="product-card">
-          <div className="product-image">
-            <img src="https://via.placeholder.com/150" alt="Producto 1" />
-          </div>
-          <div className="product-info">
-            <h2>Producto 1</h2>
-            <p>Descripción breve del producto 1.</p>
-            <p>Precio: $XX.XX</p>
-          </div>
-        </div>
-        <div className="product-card">
-          <div className="product-image">
-            <img src="https://via.placeholder.com/150" alt="Producto 2" />
-          </div>
-          <div className="product-info">
-            <h2>Producto 2</h2>
-            <p>Descripción breve del producto 2.</p>
-            <p>Precio: $XX.XX</p>
-          </div>
-        </div>
-        {/* Agrega más productos aquí */}
-      </div>
+    
+   
+<div>
+      <Menu role={user?.role || null} isLoggedIn={isLoggedIn} />
+      <h1>Bienvenido a la Página Principal del Cliente</h1>
+      <p>Aquí puedes ver productos y hacer pedidos.</p>
     </div>
   );
 }
