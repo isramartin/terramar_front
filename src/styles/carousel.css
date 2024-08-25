@@ -1,0 +1,47 @@
+  .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Ajusta el ancho máximo del carrusel según sea necesario */
+    max-height: 450px;
+    margin: 0 auto; /* Centra el carrusel horizontalmente */
+    overflow: hidden; /* Oculta las partes de las imágenes que se salen del contenedor */
+  }
+  
+  .carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    height: auto; /* Mantiene la relación de aspecto original de la imagen */
+    display: block; /* Elimina espacios blancos debajo de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor, recortando si es necesario */
+    margin-top: 3%;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .carousel-button.prev {
+    left: 10px;
+  }
+  
+  .carousel-button.next {
+    right: 10px;
+  }
+  
