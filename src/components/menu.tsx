@@ -16,6 +16,7 @@ export function Menu(props: MenuProps): JSX.Element {
     localStorage.removeItem('user');
     // Redirige a la página de login
     navigate('/login');
+    //cambios de muestra
   };
 
   return (
