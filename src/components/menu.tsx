@@ -25,13 +25,15 @@ export function Menu(props: MenuProps): JSX.Element {
         {!isLoggedIn ? (
           <>
             <li><Link to="/login">Login</Link></li>
-            <li><Link to="/view-products">View Products</Link></li>
+            <li><Link to={'/home-client'}>Home</Link></li>
+            <li><Link to="/products">View Products</Link></li>
           </>
         ) : (
           <>
             {role === 'client' && (
               <>
                 <li><Link to="/home-client">Home Client</Link></li>
+                <li><Link to="/products">View Products</Link></li>
                 <li><Link to="/view-orders">View Orders</Link></li>
                 <li><Link to="/account-settings">Account Settings</Link></li>
               </>

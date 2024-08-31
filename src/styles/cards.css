@@ -1,0 +1,36 @@
+/* src/styles/global.css */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  
+  .product-card {
+    width: 100%;
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .product-card .card-body {
+    padding: 16px;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .btn{
+    left:20px;
+  }
+  .product-card .btn {
+    margin-top: 8px;
+    width: 100%;
+    
+  }
+  

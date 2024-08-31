@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Login from './views/login';
 import HomeClient from './views/homeClient';
 import HomeAdmin from './views/homeAdmin';
+import Products from './views/products';
 import './App.css';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/home-client" element={<HomeClient />} />
         <Route path="/home-admin" element={<HomeAdmin />} />
+        <Route path="/products" element={ <Products/>} />
         <Route 
           path="/home-admin" 
           element={
