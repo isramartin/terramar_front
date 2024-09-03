@@ -1,0 +1,66 @@
+.recent-products-carousel {
+    padding: 0;
+    background-color: #ffffff;
+    height: auto;
+    margin: 0;
+  }
+  
+  .recent-products-carousel h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .carouselP-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .carouselP {
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal */
+    /* scroll-behavior: smooth; Desplazamiento suave */
+    gap: 20px; /* Espacio entre las tarjetas */
+    padding: 10px 0; /* Espacio superior e inferior */
+    white-space: nowrap; /* Evita el salto de línea en los elementos hijos */
+    transition: transform 0.1s ease-in-out; /* Añade una transición suave para el desplazamiento */
+  }
+  
+  .carouselP::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento en navegadores basados en WebKit */
+  }
+  
+  .carouselP-item {
+    flex: 0 0 auto; /* No permite que los elementos se reduzcan */
+    display: inline-block; /* Permite el desplazamiento horizontal */
+    width: 400px; /* Ajusta el ancho de las tarjetas */
+    height: 300px; /* Aumenta la altura de las tarjetas */
+    margin-right: 20px; /* Espacio entre las tarjetas */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto total */
+  }
+  
+  .carouselP-button {
+    position: absolute;
+    top: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    transform: translateY(-50%);
+    font-size: 20px;
+  }
+  
+  .carouselP-button.prev {
+    left: 10px;
+  }
+  
+  .carouselP-button.next {
+    right: 10px;
+  }
+  

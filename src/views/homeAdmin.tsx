@@ -29,7 +29,7 @@ useEffect(() => {
   return (
     <div className="globalcontainer">
       <Menu role={user ? user.role : null} isLoggedIn={!!user} />
-      <div className="content-home">
+      <div className="title-home">
       <h1>Bienvenido a la Página Principal del Administrador</h1>
       <p>Aquí puedes gestionar productos, ver estadísticas y administrar pedidos.</p>
       </div>

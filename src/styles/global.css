@@ -3,13 +3,28 @@
     margin-top: 60px; /* Asegúrate de que el contenido no se solape con el menú fijo */
   }
   
-  .content-home {
+  .title-home {
     max-width: 100%; /* Establece un ancho máximo para el contenido */
     margin: 10 auto; /* Centra el contenido horizontalmente */
     padding: 20px; /* Añade espacio interno alrededor del contenido */
     background-color: #f9f9f9; /* Color de fondo para el contenido */
     border-radius: 8px; /* Redondea las esquinas del contenedor del contenido */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil */
+  }
+
+  .content {
+    max-width: 90%;
+    margin: 10px auto; /* Centra el contenido horizontalmente */
+    padding: 20px;
+    background-color: #ffffff;
+    /* border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    margin-top: 40px; /* Añade espacio superior para separar de otros componentes */
+    display: flex;
+    flex-direction: column; /* Organiza los hijos en columna */
+    /* align-items: center; Centra horizontalmente los elementos hijos */
+    justify-content: center; /* Centra verticalmente los elementos hijos */
+    min-height: 400px; /* Asegúrate de que haya suficiente altura para el centrado vertical */
   }
   
   h1 {

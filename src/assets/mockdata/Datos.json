@@ -9,68 +9,103 @@
       "name": "Producto 1",
       "price": 100,
       "description": "Descripción del producto 1",
-      "image": "../image/image1.png"
+      "image": "../image/image1.png",
+      "addedDate": "2024-09-02T12:00:00Z"
     },
     {
       "id": 2,
       "name": "Producto 2",
       "price": 150,
       "description": "Descripción del producto 2",
-      "image": "ruta/de/la/imagen2.jpg"
+      "image": "ruta/de/la/imagen2.jpg",
+      "addedDate": "2024-09-02T12:00:00Z"
     },
     {
       "id": 3,
       "name": "Producto 3",
       "price": 250,
       "description": "Descripción del producto 2",
-      "image": "ruta/de/la/imagen2.jpg"
+      "image": "ruta/de/la/imagen2.jpg",
+      "addedDate": "2024-09-01T12:00:00Z"
     },
     {
       "id": 4,
       "name": "Producto 4",
       "price": 250,
       "description": "Descripción del producto 2",
-      "image": "ruta/de/la/imagen2.jpg"
+      "image": "ruta/de/la/imagen2.jpg",
+      "addedDate": "2024-08-01T12:00:00Z"
     },
     {
       "id": 5,
       "name": "Producto 5",
       "price": 250,
       "description": "Descripción del producto 2",
-      "image": "ruta/de/la/imagen2.jpg"
+      "image": "ruta/de/la/imagen2.jpg",
+      "addedDate": "2024-08-30"
     },
     {
       "id": 6,
       "name": "Producto 6",
       "price": 250,
       "description": "Descripción del producto 2",
-      "image": "ruta/de/la/imagen2.jpg"
+      "image": "ruta/de/la/imagen2.jpg",
+      "addedDate": "2024-08-30"
     },
     {
       "id": 7,
       "name": "Producto 7",
       "price": 250,
       "description": "Descripción del producto 2",
-      "image": "ruta/de/la/imagen2.jpg"
+      "image": "ruta/de/la/imagen2.jpg",
+      "addedDate": "2024-08-30"
     },
     {
       "id": 8,
       "name": "Producto 8",
       "price": 250,
       "description": "Descripción del producto 2",
-      "image": "ruta/de/la/imagen2.jpg"
+      "image": "ruta/de/la/imagen2.jpg",
+      "addedDate": "2024-08-30"
     },
     {
       "id": 9,
       "name": "Producto 9",
       "price": 250,
       "description": "Descripción del producto 2",
-      "image": "ruta/de/la/imagen2.jpg"
+      "image": "ruta/de/la/imagen2.jpg",
+      "addedDate": "2024-08-30"
     }
   ],
     "orders": [
       { "id": 1, "userId": 2, "productIds": [1], "status": "completed", "total": 100 },
       { "id": 2, "userId": 2, "productIds": [2], "status": "pending", "total": 200 }
-    ]
+    ],
+    "testimonials": [
+    {
+      "id": 1,
+      "name": "Juan Pérez",
+      "image": "ruta/de/la/imagen1.jpg",
+      "comment": "Este producto es excelente, superó todas mis expectativas."
+    },
+    {
+      "id": 2,
+      "name": "María López",
+      "image": "ruta/de/la/imagen2.jpg",
+      "comment": "Estoy muy contenta con el producto, lo recomiendo a todos."
+    },
+    {
+      "id": 3,
+      "name": "Carlos García",
+      "image": "ruta/de/la/imagen3.jpg",
+      "comment": "Una compra muy satisfactoria, calidad insuperable."
+    },
+    {
+      "id": 4,
+      "name": "isra Martin",
+      "image": "ruta/de/la/imagen3.jpg",
+      "comment": "Una compra muy satisfactoria, calidad insuperable."
+    }
+  ]
   }
   
