@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import Datos from '../assets/mockdata/Datos.json'; // Importa los datos mock
 import ProductCard from './cards'; // Importa el componente ProductCard
 import '../styles/productosRecientes.css';
@@ -17,7 +17,6 @@ const MAX_RECENT_PRODUCTS = 6; // Número máximo de productos recientes a mostr
 
 const RecentProducts: React.FC = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
-  const [scrollPosition, setScrollPosition] = useState(0);
 
   const now = new Date();
   const recentProducts = Datos.products
@@ -27,53 +26,29 @@ const RecentProducts: React.FC = () => {
       return daysDifference <= RECENT_DAYS;
     })
     .sort((a, b) => new Date(b.addedDate).getTime() - new Date(a.addedDate).getTime()) // Ordenar por fecha descendente
-    .slice(0, MAX_RECENT_PRODUCTS); // Tomar los primeros 6 productos recientes
+    .slice(0, MAX_RECENT_PRODUCTS);
 
   useEffect(() => {
     const carousel = carouselRef.current;
     if (carousel) {
-      const handleScroll = () => {
-        if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 1) {
-          carousel.scrollLeft = 0;
-        }
-        setScrollPosition(carousel.scrollLeft);
-      };
+      const totalWidth = recentProducts.length * 300 + (recentProducts.length - 1) * 20; // Ajusta el cálculo según el tamaño y espaciado de los ítems
 
-      // Mover el carrusel automáticamente
       const scrollInterval = setInterval(() => {
-        if (carousel.scrollLeft + carousel.clientWidth < carousel.scrollWidth) {
-          carousel.scrollLeft += 1; // Ajusta la velocidad del desplazamiento
-        } else {
-          carousel.scrollLeft = 0; // Reiniciar el desplazamiento al principio
+        if (carousel) {
+          carousel.scrollBy({ left: 1, behavior: 'smooth' });
+          if (carousel.scrollLeft >= totalWidth - carousel.clientWidth) {
+            carousel.scrollLeft = 0; // Reiniciar el scroll al principio
+          }
         }
-      }, 20); // Ajusta el intervalo de tiempo para el desplazamiento automático
+      }, 10); // Ajusta el intervalo para la velocidad del desplazamiento
 
-      carousel.addEventListener('scroll', handleScroll);
-
-      return () => {
-        clearInterval(scrollInterval);
-        carousel.removeEventListener('scroll', handleScroll);
-      };
+      return () => clearInterval(scrollInterval);
     }
   }, [recentProducts]);
 
-  const handlePrev = () => {
-    if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: -300, behavior: 'smooth' }); // Ajusta el valor según el tamaño de las tarjetas
-    }
-  };
-
-  const handleNext = () => {
-    if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: 300, behavior: 'smooth' }); // Ajusta el valor según el tamaño de las tarjetas
-    }
-  };
-
   return (
     <div className="recent-products-carousel">
-
       <div className="carouselP-wrapper">
-        <button className="carouselP-button prev" onClick={handlePrev}>❮</button>
         <div className="carouselP" ref={carouselRef}>
           <div className="carouselP-inner">
             {recentProducts.map(product => (
@@ -87,9 +62,9 @@ const RecentProducts: React.FC = () => {
                 />
               </div>
             ))}
-            {/* Duplicar el contenido para el efecto infinito */}
+            {/* Repetir los ítems en el carrusel para el efecto continuo */}
             {recentProducts.map(product => (
-              <div key={`duplicate-${product.id}`} className="carouselP-item">
+              <div key={`repeat-${product.id}`} className="carouselP-item">
                 <ProductCard
                   id={product.id}
                   name={product.name}
@@ -101,7 +76,6 @@ const RecentProducts: React.FC = () => {
             ))}
           </div>
         </div>
-        <button className="carouselP-button next" onClick={handleNext}>❯</button>
       </div>
     </div>
   );
