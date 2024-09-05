@@ -28,13 +28,14 @@ export function HomeClient(): JSX.Element {
   return (
     <div className="globalcontainer">
       <Menu role={user?.role || null} isLoggedIn={isLoggedIn} />
-      <div className="title-home">
+      {/* <div className="title-home">
         <h1>Bienvenido a la Página Principal del Cliente</h1>
         <p>Aquí puedes ver productos y hacer pedidos.</p>
-      </div>
-      <div className="content">
+      </div> */}
+      
       <Carousel images={images} />
 
+      <div className="content">
       <CategoryCard categories={categories} />
 
       <h1>Testimonios</h1>
@@ -43,6 +44,10 @@ export function HomeClient(): JSX.Element {
       <h1>Productos Recientes</h1>
         <RecentProducts />
       </div>
+      {/* Pie de página */}
+      <footer className="footer">
+        <p>© 2024 Mi Tienda. Todos los derechos reservados.</p>
+      </footer>
     </div>
   );
 }

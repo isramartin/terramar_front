@@ -1,6 +1,15 @@
 .globalcontainer {
-    padding: 20px; /* Añade espacio alrededor del contenedor */
-    margin-top: 60px; /* Asegúrate de que el contenido no se solape con el menú fijo */
+    /* padding: 20px; /* Añade espacio alrededor del contenedor 
+    margin-top: 60px; Asegúrate de que el contenido no se solape con el menú fijo */
+  }
+  .footer {
+    background-color: #000; /* Color de fondo negro */
+    color: #fff; /* Texto blanco */
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
   }
   
   .title-home {
