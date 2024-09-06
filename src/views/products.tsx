@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import Datos from '../assets/mockdata/Datos.json'; // Importa los datos mock
+import Datos from '../assets/mockdata/Datos.json';
 import { Menu } from '../components/menu';
-import ProductCard from '../components/cards'; // Importa el componente ProductCard
-
+import ProductCard from '../components/cards';
+import Image1 from '../assets/image/image1.png'
 
 export interface Product {
   id: number;
   name: string;
   price: number;
   description: string;
-  image: string; // Ahora es opcional
+  image: string; // Ruta de la imagen
 }
+
 
 function Products() {
   const [productList, setProductList] = useState<Product[]>([]);
@@ -37,22 +38,21 @@ function Products() {
       <Menu role={user?.role || null} isLoggedIn={isLoggedIn} />
       <div className="content-home">
         <h1>Productos</h1>
-        </div>
-        <div className="products-grid">
-          {productList.map(product => (
-            <ProductCard
-              key={product.id}
-              id={product.id}
-              name={product.name}
-              price={product.price}
-              image={product.image}
-              description={product.description}
-              onAddToCart={handleAddToCart}
-              onBuyNow={handleBuyNow}
-            />
-          ))}
-        </div>
-    
+      </div>
+      <div className="products-grid">
+        {productList.map(product => (
+          <ProductCard
+            key={product.id}
+            id={product.id}
+            name={product.name}
+            price={product.price}
+            image={product.image}
+            description={product.description}
+            onAddToCart={handleAddToCart}
+            onBuyNow={handleBuyNow}
+          />
+        ))}
+      </div>
     </div>
   );
 }

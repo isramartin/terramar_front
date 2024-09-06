@@ -9,7 +9,7 @@
       "name": "Producto 1",
       "price": 100,
       "description": "Descripción del producto 1",
-      "image": "../image/image1.png",
+      "image": "image1.png",
       "addedDate": "2024-09-02T12:00:00Z"
     },
     {
@@ -17,7 +17,7 @@
       "name": "Producto 2",
       "price": 150,
       "description": "Descripción del producto 2",
-      "image": "ruta/de/la/imagen2.jpg",
+      "image": "image2.png",
       "addedDate": "2024-09-02T12:00:00Z"
     },
     {
@@ -25,7 +25,7 @@
       "name": "Producto 3",
       "price": 250,
       "description": "Descripción del producto 2",
-      "image": "ruta/de/la/imagen2.jpg",
+      "image": "image3.png",
       "addedDate": "2024-09-01T12:00:00Z"
     },
     {
@@ -33,7 +33,7 @@
       "name": "Producto 4",
       "price": 250,
       "description": "Descripción del producto 2",
-      "image": "ruta/de/la/imagen2.jpg",
+      "image": "image2.png",
       "addedDate": "2024-08-01T12:00:00Z"
     },
     {
@@ -41,7 +41,7 @@
       "name": "Producto 5",
       "price": 250,
       "description": "Descripción del producto 2",
-      "image": "ruta/de/la/imagen2.jpg",
+      "image": "image2.png",
       "addedDate": "2024-08-30"
     },
     {
@@ -49,7 +49,7 @@
       "name": "Producto 6",
       "price": 250,
       "description": "Descripción del producto 2",
-      "image": "ruta/de/la/imagen2.jpg",
+      "image": "image2.png",
       "addedDate": "2024-08-30"
     },
     {
@@ -57,7 +57,7 @@
       "name": "Producto 7",
       "price": 250,
       "description": "Descripción del producto 2",
-      "image": "ruta/de/la/imagen2.jpg",
+      "image": "image2.png",
       "addedDate": "2024-08-30"
     },
     {
@@ -65,7 +65,7 @@
       "name": "Producto 8",
       "price": 250,
       "description": "Descripción del producto 2",
-      "image": "ruta/de/la/imagen2.jpg",
+      "image": "image2.png",
       "addedDate": "2024-08-30"
     },
     {
@@ -73,7 +73,7 @@
       "name": "Producto 9",
       "price": 250,
       "description": "Descripción del producto 2",
-      "image": "ruta/de/la/imagen2.jpg",
+      "image": "image2.png",
       "addedDate": "2024-08-30"
     }
   ],
