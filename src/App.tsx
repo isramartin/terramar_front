@@ -5,7 +5,10 @@ import Login from './views/login';
 import HomeClient from './views/homeClient';
 import HomeAdmin from './views/homeAdmin';
 import Products from './views/products';
+import FormularioContacto from './views/formulario';
+import FormularioRegistro from './views/registro';
 import './App.css';
+
 
 function App() {
   const user = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')!) : null;
@@ -29,6 +32,8 @@ function App() {
         <Route path="/home-client" element={<HomeClient />} />
         <Route path="/home-admin" element={<HomeAdmin />} />
         <Route path="/products" element={ <Products/>} />
+        <Route path="/formulario" element={ <FormularioContacto/>} />
+        <Route path="/register" element={ <FormularioRegistro/>} />
         <Route 
           path="/home-admin" 
           element={

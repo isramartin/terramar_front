@@ -3,6 +3,7 @@ import Datos from '../assets/mockdata/Datos.json';
 import { Menu } from '../components/menu';
 import ProductCard from '../components/cards';
 import Image1 from '../assets/image/image1.png'
+import "../styles/global.css";
 
 export interface Product {
   id: number;
@@ -34,7 +35,7 @@ function Products() {
   };
 
   return (
-    <div className="globalcontainer">
+    <div className="content">
       <Menu role={user?.role || null} isLoggedIn={isLoggedIn} />
       <div className="content-home">
         <h1>Productos</h1>

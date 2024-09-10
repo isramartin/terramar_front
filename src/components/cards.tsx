@@ -1,14 +1,14 @@
 import React from 'react';
 import '../styles/cards.css';
 
-import imagen1 from '../assets/image/image1.png';
-import imagen2 from '../assets/image/image2.png';
-import imagen3 from '../assets/image/image3.png';
+import imagen1 from '../assets/image/image4.png';
+import imagen2 from '../assets/image/image5.png';
+import imagen3 from '../assets/image/image6.png';
 
 const imageMap: { [key: string]: string } = {
-  'image1.png': imagen1,
-  'image2.png': imagen2,
-  'image3.png': imagen3,
+  'image4.png': imagen1,
+  'image5.png': imagen2,
+  'image6.png': imagen3,
 };
 
 export interface ProductCardProps {

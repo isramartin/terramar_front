@@ -17,9 +17,9 @@ export function HomeClient(): JSX.Element {
   const isLoggedIn = !!user;
 
   const categories = [
-    { id: 1, name: 'Electrónica', image: image1 },
-    { id: 2, name: 'Ropa', image: image2 },
-    { id: 3, name: 'Hogar', image: image3 },
+    { id: 1, name: 'Dama', image: image1 },
+    { id: 2, name: 'Cabellero', image: image2 },
+    { id: 3, name: 'Cremas', image: image3 },
     // Agrega más categorías según sea necesario
   ];
   
