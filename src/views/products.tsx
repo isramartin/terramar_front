@@ -56,8 +56,8 @@ function Products() {
               price={product.price}
               image={product.image}
               description={product.description}
-              onAddToCart={handleAddToCart}
-              onBuyNow={handleBuyNow}
+              // onAddToCart={handleAddToCart}
+              // onBuyNow={handleBuyNow}
               onClick={handleCardClick}
             />
           ))}
