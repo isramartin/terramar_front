@@ -46,6 +46,11 @@ const RecentProducts: React.FC = () => {
     }
   }, [recentProducts]);
 
+  const handleCardClick = (id: number) => {
+    console.log(`Producto ${id} clickeado`);
+    // Aquí podrías manejar la apertura del modal con detalles del producto o redirigir a otra página
+  };
+
   return (
     <div className="recent-products-carousel">
       <div className="carouselP-wrapper">
@@ -59,6 +64,7 @@ const RecentProducts: React.FC = () => {
                   price={product.price}
                   image={product.image}
                   description={product.description}
+                  onClick={handleCardClick} // Pasar la función de clic
                 />
               </div>
             ))}
@@ -71,6 +77,7 @@ const RecentProducts: React.FC = () => {
                   price={product.price}
                   image={product.image}
                   description={product.description}
+                  onClick={handleCardClick} // Pasar la función de clic
                 />
               </div>
             ))}

@@ -7,6 +7,7 @@ import HomeAdmin from './views/homeAdmin';
 import Products from './views/products';
 import FormularioContacto from './views/formulario';
 import FormularioRegistro from './views/registro';
+import ProductDetailPage from './views/productDetail';
 import './App.css';
 
 
@@ -32,8 +33,10 @@ function App() {
         <Route path="/home-client" element={<HomeClient />} />
         <Route path="/home-admin" element={<HomeAdmin />} />
         <Route path="/products" element={ <Products/>} />
+        <Route path="/productos/detalle/:id" element={ <ProductDetailPage/>} />
         <Route path="/formulario" element={ <FormularioContacto/>} />
         <Route path="/register" element={ <FormularioRegistro/>} />
+        
         <Route 
           path="/home-admin" 
           element={

@@ -29,11 +29,20 @@
     /* border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     margin-top: 40px; /* Añade espacio superior para separar de otros componentes */
+    margin-bottom: 1px;
     display: flex;
     flex-direction: column; /* Organiza los hijos en columna */
     /* align-items: center; Centra horizontalmente los elementos hijos */
     justify-content: center; /* Centra verticalmente los elementos hijos */
     min-height: 400px; /* Asegúrate de que haya suficiente altura para el centrado vertical */
+  }
+
+  .product-detail-view {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco para el detalle del producto */
+    /* Borde ligero para el contenedor */
+    border-radius: 8px; /* Esquinas redondeadas */
   }
   
   h1 {

@@ -1,0 +1,79 @@
+.breadcrumb-container {
+    margin-top: 60px; /* Ajusta este valor según sea necesario */
+    padding: 8px;
+    background-color: #1d1b1b00; /* Color de fondo opcional */
+    /* Eliminar borde (si había uno) */
+}
+
+.breadcrumb-item {
+    display: inline;
+    margin-right: 5px;
+}
+
+.breadcrumb-item::after {
+    content: '>';
+    margin-left: 5px;
+    color: #080808;
+}
+
+.breadcrumb-item:last-child::after {
+    content: '';
+}
+
+.breadcrumb-item a {
+    color: #333;
+    text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-item.active a {
+    color: #43d626; /* Color azul para el nombre del producto */
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.breadcrumb span {
+    margin-right: 5px;
+}
+
+.breadcrumb a {
+    color: blue; /* Color para los enlaces del breadcrumb */
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb .separator {
+    color: rgb(29, 29, 29); /* Color para el separador */
+}
+
+.breadcrumb-link {
+    color: rgb(94, 94, 105); /* Color de los enlaces */
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.breadcrumb-link:hover {
+    text-decoration: underline;
+}
+
+/* Separador entre los enlaces del breadcrumb */
+.breadcrumb-separator {
+    color: rgb(0, 0, 0); /* Color del separador */
+    margin: 3 5px;
+}
+
+/* Elemento de breadcrumb actual */
+.breadcrumb-current {
+    color: rgb(3, 6, 143); /* Color del texto actual */
+    font-weight: bold; /* Negrita para el texto actual */
+}

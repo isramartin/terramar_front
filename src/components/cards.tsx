@@ -19,6 +19,7 @@ export interface ProductCardProps {
   description?: string;
   onAddToCart?: (id: number) => void;
   onBuyNow?: (id: number) => void;
+  onClick: (id: number) => void;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({
@@ -29,25 +30,47 @@ const ProductCard: React.FC<ProductCardProps> = ({
     description,
     onAddToCart,
     onBuyNow,
+    onClick,
   }) => {
     const imgSrc = imageMap[image] || '/assets/image/default.jpg'; // Imagen por defecto
 
     return (
-        <div className="product-card">
-          <img src={imgSrc} className="card-img-top" alt={name} />
-          <div className="card-body">
-            <h5 className="card-title">{name}</h5>
-            {description && <p className="card-text">{description}</p>}
-            <p className="card-text">${price.toFixed(2)}</p>
-            <button className="btn btn-primary" onClick={() => onAddToCart?.(id)}>
-              Agregar al Carrito
-            </button>
-            <button className="btn btn-success ml-2" onClick={() => onBuyNow?.(id)}>
-              Comprar Ahora
-            </button>
+      <div 
+        className="product-card" 
+        onClick={() => onClick(id)} // Llama a la función onClick al hacer clic
+      >
+        <img src={imgSrc} className="card-img-top" alt={name} />
+        <div className="card-body">
+          <h5 className="card-title">{name}</h5>
+          {description && <p className="card-text">{description}</p>}
+          <p className="card-text">${price.toFixed(2)}</p>
+          <div className="button-group">
+            {onAddToCart && (
+              <button 
+                className="btn btn-primary" 
+                onClick={(e) => {
+                  e.stopPropagation(); // Evita que el clic en este botón cierre el modal
+                  onAddToCart(id);
+                }}
+              >
+                Agregar al Carrito
+              </button>
+            )}
+            {onBuyNow && (
+              <button 
+                className="btn btn-success ml-2" 
+                onClick={(e) => {
+                  e.stopPropagation(); // Evita que el clic en este botón cierre el modal
+                  onBuyNow(id);
+                }}
+              >
+                Comprar Ahora
+              </button>
+            )}
           </div>
         </div>
-      );
+      </div>
+    );
 };
 
 export default ProductCard;

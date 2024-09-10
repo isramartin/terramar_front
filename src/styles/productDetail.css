@@ -1,0 +1,25 @@
+.product-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .product-detail img {
+    max-width: 300px;
+    margin-right: 20px;
+    margin-top: 15px;
+  }
+  .product-detail h2{
+    margin-top: 15px;
+  }
+  
+  .product-detail .details {
+    max-width: 600px;
+  }
+  
+  .product-detail .details h2 {
+    margin-top: 0;
+  }
