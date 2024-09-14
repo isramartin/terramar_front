@@ -1,0 +1,36 @@
+.apartados-container {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .apartados-tabs {
+    display: flex;
+  }
+  
+  .apartados-tabs button {
+    flex: 1;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: border-bottom 0.3s ease;
+    background: #454545;
+  }
+  
+  .apartados-tabs button:hover {
+    border-bottom: 2px solid #007bff;
+  }
+  
+  .apartados-tabs button.active {
+    border-bottom: 2px solid #007bff;
+  }
+  
+  .apartados-content {
+    margin-top: 20px;
+  }
+  
+  .apartados-content h2 {
+    margin-bottom: 10px;
+  }
+  

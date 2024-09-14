@@ -1,8 +1,10 @@
 .breadcrumb-container {
+    position:fixed;
     margin-top: 60px; /* Ajusta este valor según sea necesario */
     padding: 8px;
-    background-color: #1d1b1b00; /* Color de fondo opcional */
+    background-color: #ffffff; /* Color de fondo opcional */
     /* Eliminar borde (si había uno) */
+    z-index: 999999;
 }
 
 .breadcrumb-item {

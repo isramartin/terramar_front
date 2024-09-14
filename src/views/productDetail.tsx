@@ -12,6 +12,7 @@ export interface Product {
   name: string;
   price: number;
   description: string;
+  descriptionD: string;
   image: string;
 }
 
@@ -54,9 +55,13 @@ const ProductDetailPage: React.FC = () => {
             name={product.name}
             price={product.price}
             description={product.description}
+            descriptionD={product.descriptionD || 'Sin detalles'}
           />
         </div>
       </div>
+      <footer className="footer">
+        <p>© 2024 Mi Tienda. Todos los derechos reservados.</p>
+      </footer>
     </div>
   );
 };

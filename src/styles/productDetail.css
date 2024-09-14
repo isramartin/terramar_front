@@ -1,25 +1,47 @@
 .product-detail {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .product-detail img {
-    max-width: 300px;
-    margin-right: 20px;
-    margin-top: 15px;
-  }
-  .product-detail h2{
-    margin-top: 15px;
-  }
-  
-  .product-detail .details {
-    max-width: 600px;
-  }
-  
-  .product-detail .details h2 {
-    margin-top: 0;
-  }
+  display: flex;
+  flex-direction: column; /* Hace que los elementos se apilen verticalmente */
+  width: 100%;
+  margin: 0 auto;
+}
+
+.product-top {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  /* justify-content: space-between; Espacia los dos divs horizontalmente */
+  gap: 20px; 
+  /* width: 100%; */
+}
+
+/* .product-image-container, .product-info-container {
+  flex: 1; /* Toma el mismo espacio disponible 
+  max-width: 500px; /* Limita el ancho máximo al 50% del contenedor 
+} */
+
+.product-image-container {
+  flex: 1; /* Toma el espacio disponible */
+  max-width: 500px; /* Limita el ancho máximo de la imagen */
+}
+
+.product-image-container img {
+  width: 100%; /* Ajusta la imagen al ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin-top: 15px;
+}
+
+.product-info-container {
+  flex: 1; /* Toma el mismo espacio disponible que el contenedor de la imagen */
+  max-width: 100%; /* Limita el ancho máximo al 50% del contenedor padre */
+  padding-left: 20px; /* Espacio entre la imagen y la información */
+}
+
+.product-info-container h2 {
+  margin-top: 15px;
+}
+
+.additional-info {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  margin-top: 40px; /* Espacio superior para separar del contenido anterior */
+  /* Puedes añadir estilos adicionales según el contenido que agregarás aquí */
+}
