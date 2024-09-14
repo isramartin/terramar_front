@@ -18,7 +18,7 @@ export interface Product {
   
 }
 
-const PRODUCTS_PER_PAGE = 4; // Número de productos por página
+const PRODUCTS_PER_PAGE = 8; // Número de productos por página
 
 function Products() {
   const [productList, setProductList] = useState<Product[]>([]);

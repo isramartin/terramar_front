@@ -7,7 +7,7 @@ nav {
     width: 100%; /* Asegura que el menú ocupe el ancho completo */
     z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
     padding: 20px 20px; /* Espaciado interno del menú */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Añade una sombra sutil para un efecto de profundidad */
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); Añade una sombra sutil para un efecto de profundidad */
   }
   
   ul {
