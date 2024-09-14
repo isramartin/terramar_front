@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Datos from '../assets/mockdata/Datos.json';
 import { Menu } from '../components/menu';
 import ProductCard from '../components/cards';
+import Paginador from '../components/paginador';
 import "../styles/global.css";
 
 export interface Product {
@@ -12,10 +13,16 @@ export interface Product {
   price: number;
   description: string;
   image: string;
+  rating?: number;  // Hacer 'rating' opcional
+  reviews?: number;  // Hacer 'reviews' opcional
+  
 }
+
+const PRODUCTS_PER_PAGE = 4; // Número de productos por página
 
 function Products() {
   const [productList, setProductList] = useState<Product[]>([]);
+  const [paginaActual, setPaginaActual] = useState(1);
   const navigate = useNavigate();
   const user = localStorage.getItem("user")
     ? JSON.parse(localStorage.getItem("user")!)
@@ -40,6 +47,15 @@ function Products() {
     navigate(`/productos/detalle/${id}`);
   };
 
+  const totalPaginas = Math.ceil(productList.length / PRODUCTS_PER_PAGE);
+  const productosPaginados = productList.slice((paginaActual - 1) * PRODUCTS_PER_PAGE, paginaActual * PRODUCTS_PER_PAGE);
+
+  const handleCambioPagina = (pagina: number) => {
+    if (pagina >= 1 && pagina <= totalPaginas) {
+      setPaginaActual(pagina);
+    }
+  };
+
   return (
     <div className="globalcontainer">
       <div className="content">
@@ -48,7 +64,7 @@ function Products() {
           <h1>Productos</h1>
         </div>
         <div className="products-grid">
-          {productList.map(product => (
+          {productosPaginados.map(product => (
             <ProductCard
               key={product.id}
               id={product.id}
@@ -56,13 +72,23 @@ function Products() {
               price={product.price}
               image={product.image}
               description={product.description}
+              rating={product.rating ?? 0}
+              reviews={product.reviews ?? 0}
+              onClick={handleCardClick}
               // onAddToCart={handleAddToCart}
               // onBuyNow={handleBuyNow}
-              onClick={handleCardClick}
             />
           ))}
         </div>
+        <Paginador
+          paginaActual={paginaActual}
+          totalPaginas={totalPaginas}
+          onCambioPagina={handleCambioPagina}
+        />
       </div>
+      <footer className="footer">
+        <p>© 2024 Mi Tienda. Todos los derechos reservados.</p>
+      </footer>
     </div>
   );
 }

@@ -1,0 +1,41 @@
+/* src/styles/paginador.css */
+.paginador {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.paginador-button {
+  border: 1px solid #ddd;
+  background-color: #fff;
+  color: #333;
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.paginador-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.paginador-info {
+  display: flex;
+  align-items: center;
+}
+
+.paginador-current {
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+.paginador-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.paginador-current-button {
+  background-color: #007bff;
+  color: #fff;
+}

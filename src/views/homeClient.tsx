@@ -20,6 +20,8 @@ export function HomeClient(): JSX.Element {
     { id: 1, name: 'Dama', image: image1 },
     { id: 2, name: 'Cabellero', image: image2 },
     { id: 3, name: 'Cremas', image: image3 },
+    { id: 4, name: 'Capilar', image: image3 },
+    { id: 5, name: 'Capilar', image: image2 },
     // Agrega más categorías según sea necesario
   ];
   
@@ -36,13 +38,17 @@ export function HomeClient(): JSX.Element {
       <Carousel images={images} />
 
       <div className="content">
+      <h1>Categorias</h1>
       <CategoryCard categories={categories} />
 
       <h1>Testimonios</h1>
       <Testimonials testimonials={Datos.testimonials} />
 
+<div>
       <h1>Productos Recientes</h1>
         <RecentProducts />
+        
+        </div>
       </div>
       {/* Pie de página */}
       <footer className="footer">

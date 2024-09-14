@@ -10,7 +10,9 @@
       "price": 100,
       "description": "Descripción del producto 1",
       "image": "image4.png",
-      "addedDate": "2024-09-02T12:00:00Z"
+      "addedDate": "2024-09-07T12:00:00Z",
+      "rating": 4.5,
+      "reviews": 120
     },
     {
       "id": 2,
@@ -18,7 +20,9 @@
       "price": 150,
       "description": "Descripción del producto 2",
       "image": "image5.png",
-      "addedDate": "2024-09-02T12:00:00Z"
+      "addedDate": "2024-09-08T12:00:00Z",
+      "rating": 4.0,
+      "reviews": 85
     },
     {
       "id": 3,
@@ -26,7 +30,9 @@
       "price": 250,
       "description": "Descripción del producto 2",
       "image": "image6.png",
-      "addedDate": "2024-09-01T12:00:00Z"
+      "addedDate": "2024-09-01T12:00:00Z",
+      "rating": 4.8,
+      "reviews": 200
     },
     {
       "id": 4,
@@ -34,7 +40,9 @@
       "price": 250,
       "description": "Descripción del producto 2",
       "image": "image5.png",
-      "addedDate": "2024-08-01T12:00:00Z"
+      "addedDate": "2024-08-01T12:00:00Z",
+      "rating": 3.9,
+      "reviews": 65
     },
     {
       "id": 5,
@@ -42,7 +50,9 @@
       "price": 250,
       "description": "Descripción del producto 2",
       "image": "image4.png",
-      "addedDate": "2024-08-30"
+      "addedDate": "2024-09-09",
+      "rating": 4.7,
+      "reviews": 150
     },
     {
       "id": 6,
@@ -50,7 +60,9 @@
       "price": 250,
       "description": "Descripción del producto 2",
       "image": "image5.png",
-      "addedDate": "2024-08-30"
+      "addedDate": "2024-09-08",
+      "rating": 4.5,
+      "reviews": 100
     },
     {
       "id": 7,
@@ -58,7 +70,9 @@
       "price": 250,
       "description": "Descripción del producto 2",
       "image": "image6.png",
-      "addedDate": "2024-08-30"
+      "addedDate": "2024-09-10",
+      "rating": 4.9,
+      "reviews": 230
     },
     {
       "id": 8,
@@ -66,7 +80,9 @@
       "price": 250,
       "description": "Descripción del producto 2",
       "image": "image5.png",
-      "addedDate": "2024-08-30"
+      "addedDate": "2024-09-10",
+      "rating": 4.3,
+      "reviews": 110
     },
     {
       "id": 9,
@@ -74,7 +90,39 @@
       "price": 250,
       "description": "Descripción del producto 2",
       "image": "image4.png",
-      "addedDate": "2024-08-30"
+      "addedDate": "2024-09-10",
+      "rating": 4.6,
+      "reviews": 130
+    },
+    {
+      "id": 10,
+      "name": "Producto 10",
+      "price": 250,
+      "description": "Descripción del producto 2",
+      "image": "image6.png",
+      "addedDate": "2024-09-10",
+      "rating": 4.6,
+      "reviews": 130
+    },
+    {
+      "id": 11,
+      "name": "Producto 11",
+      "price": 250,
+      "description": "Descripción del producto 2",
+      "image": "image4.png",
+      "addedDate": "2024-09-10",
+      "rating": 4.6,
+      "reviews": 130
+    },
+    {
+      "id": 12,
+      "name": "Producto 12",
+      "price": 250,
+      "description": "Descripción del producto 2",
+      "image": "image5.png",
+      "addedDate": "2024-09-10",
+      "rating": 4.6,
+      "reviews": 130
     }
   ],
     "orders": [
