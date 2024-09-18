@@ -41,8 +41,8 @@ export function HomeClient(): JSX.Element {
       <h1>Categorias</h1>
       <CategoryCard categories={categories} />
 
-      <h1>Testimonios</h1>
-      <Testimonials testimonials={Datos.testimonials} />
+      {/* <h1>Testimonios</h1>
+      <Testimonials testimonials={Datos.testimonials} /> */}
 
 <div>
       <h1>Productos Recientes</h1>

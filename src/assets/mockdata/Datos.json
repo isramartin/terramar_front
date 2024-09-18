@@ -1,7 +1,7 @@
 {
     "users": [
-      { "id": 1, "email": "admin@1", "password": "adminpass", "role": "admin" },
-      { "id": 2, "email": "client@1", "password": "clientpass", "role": "client" }
+      { "id": 1,"profile": "src/","username":"israasmin" ,"email": "admin@1", "password": "adminpass", "role": "admin" },
+      { "id": 2,"profile": "src/", "username":"israclient","email": "client@1", "password": "clientpass", "role": "client" }
     ],
     "products": [
     {
@@ -133,29 +133,43 @@
     ],
     "testimonials": [
     {
-      "id": 1,
-      "name": "Juan Pérez",
-      "image": "ruta/de/la/imagen1.jpg",
-      "comment": "Este producto es excelente, superó todas mis expectativas."
+      "productId": 1,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Juan Pérez",
+          "image": "ruta/de/la/imagen1.jpg",
+          "comment": "Este producto es excelente, superó todas mis expectativas.",
+          "rating": 5
+        },
+        {
+          "id": 2,
+          "name": "Juan Pérez",
+          "image": "ruta/de/la/imagen1.jpg",
+          "comment": "Estoy muy contenta con el producto, lo recomiendo a todos.",
+          "rating": 4
+        }
+      ]
     },
     {
-      "id": 2,
-      "name": "María López",
-      "image": "ruta/de/la/imagen2.jpg",
-      "comment": "Estoy muy contenta con el producto, lo recomiendo a todos."
-    },
-    {
-      "id": 3,
-      "name": "Carlos García",
-      "image": "ruta/de/la/imagen3.jpg",
-      "comment": "Una compra muy satisfactoria, calidad insuperable."
-    },
-    {
-      "id": 4,
-      "name": "isra Martin",
-      "image": "ruta/de/la/imagen3.jpg",
-      "comment": "Una compra muy satisfactoria, calidad insuperable."
-    }
-  ]
-  }
+      "productId": 2,
+      "reviews": [
+        {
+          "id": 3,
+          "name": "Juan Pérez",
+          "image": "ruta/de/la/imagen1.jpg",
+          "comment": "Una compra muy satisfactoria, calidad insuperable.",
+          "rating": 4
+        },
+        {
+          "id": 4,
+          "name": "Juan Pérez",
+          "image": "ruta/de/la/imagen1.jpg",
+          "comment": "Muy buen producto, lo volveré a comprar.",
+          "rating": 5
+        }
+      ]
   
+   }
+  ]
+}

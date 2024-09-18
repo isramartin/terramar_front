@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import ProfileMenu from './ProfileMenu';
 import '../styles/menu.css'; // Asegúrate de que la ruta al archivo CSS sea correcta
 
 interface MenuProps {
@@ -22,34 +23,25 @@ export function Menu(props: MenuProps): JSX.Element {
   return (
     <nav>
       <ul>
-        {!isLoggedIn ? (
+        <li><Link to="/home-client">Home</Link></li>
+        <li><Link to="/products">View Products</Link></li>
+        <li><Link to="/formulario">Unete</Link></li>
+
+        {isLoggedIn && role === 'client' && (
           <>
-            <li><Link to="/login">Login</Link></li>
-            <li><Link to={'/home-client'}>Home</Link></li>
-            <li><Link to="/products">View Products</Link></li>
-            <li><Link to="/formulario">Unete</Link></li>
-          </>
-        ) : (
-          <>
-            {role === 'client' && (
-              <>
-                <li><Link to="/home-client">Home Client</Link></li>
-                <li><Link to="/products">View Products</Link></li>
-                <li><Link to="/formulario">Unete</Link></li>
-                <li><Link to="/view-orders">View Orders</Link></li>
-                <li><Link to="/account-settings">Account Settings</Link></li>
-              </>
-            )}
-            {role === 'admin' && (
-              <>
-                <li><Link to="/home-admin">Home Admin</Link></li>
-                <li><Link to="/manage-users">Manage Users</Link></li>
-                <li><Link to="/view-reports">View Reports</Link></li>
-              </>
-            )}
-            <li><button onClick={handleLogout}>Logout</button></li>
+            <li><Link to="/view-orders">View Orders</Link></li>
+            <li><Link to="/account-settings">Account Settings</Link></li>
           </>
         )}
+        {isLoggedIn && role === 'admin' && (
+          <>
+            <li><Link to="/home-admin">Home Admin</Link></li>
+            <li><Link to="/manage-users">Manage Users</Link></li>
+            <li><Link to="/view-reports">View Reports</Link></li>
+          </>
+        )}
+        
+        <ProfileMenu isLoggedIn={isLoggedIn} onLogout={handleLogout} />
       </ul>
     </nav>
   );

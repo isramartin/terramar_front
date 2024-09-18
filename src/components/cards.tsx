@@ -58,7 +58,9 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
           {/* Renderiza las estrellas y el número de reseñas */}
           <div className="d-flex align-items-center justify-content-center mb-1">
-            <StarRating rating={rating} />  {/* Usa el componente StarRating */}
+            <StarRating rating={rating} onRate={function (rating: number): void {
+              throw new Error('Function not implemented.');
+            } } />  {/* Usa el componente StarRating */}
             <small>({reviews} reseñas)</small>
           </div>
 

@@ -15,6 +15,7 @@ const imageMap: { [key: string]: string } = {
 
 
 interface ProductDetailProps {
+  id: number;
   image: string;
   name: string;
   price: number;
@@ -22,7 +23,7 @@ interface ProductDetailProps {
   descriptionD: string;
 }
 
-const ProductDetail: React.FC<ProductDetailProps> = ({ image, name, price, description, descriptionD  }) => {
+const ProductDetail: React.FC<ProductDetailProps> = ({ id, image, name, price, description, descriptionD  }) => {
     const imgSrc = imageMap[image] || '/assets/image/default.jpg';
   return (
     <div className="product-detail">
@@ -40,7 +41,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ image, name, price, descr
     {/* Aquí puedes agregar más contenido según sea necesario */}
     {/* <h2>holaa probando </h2> */}
 
-    <Apartados descriptionD={descriptionD}/>
+    <Apartados descriptionD={descriptionD} productId={id}/>
   </div>
 
  

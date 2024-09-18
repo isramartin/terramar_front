@@ -1,36 +1,58 @@
 .apartados-container {
-    width: 100%;
-    margin-top: 20px;
-  }
-  
-  .apartados-tabs {
-    display: flex;
-  }
-  
-  .apartados-tabs button {
-    flex: 1;
-    padding: 10px;
-    background-color: transparent;
-    border: none;
-    border-bottom: 2px solid transparent;
-    cursor: pointer;
-    transition: border-bottom 0.3s ease;
-    background: #454545;
-  }
-  
-  .apartados-tabs button:hover {
-    border-bottom: 2px solid #007bff;
-  }
-  
-  .apartados-tabs button.active {
-    border-bottom: 2px solid #007bff;
-  }
-  
-  .apartados-content {
-    margin-top: 20px;
-  }
-  
-  .apartados-content h2 {
-    margin-bottom: 10px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.apartados-tabs {
+  display: flex;
+  justify-content: space-around;
+}
+
+.apartados-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.resenas {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reviews-list {
+  width: 70%;
+}
+
+.review-form-container {
+  width: 30%;
+  padding: 1rem;
+  border-left: 1px solid #271daca6;
+}
+
+.apartados-tabs button {
+  flex: 1;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: border-bottom 0.3s ease;
+  background: #454545;
+}
+
+.apartados-tabs button:hover {
+  border-bottom: 2px solid #007bff;
+}
+
+.apartados-tabs button.active {
+  border-bottom: 2px solid #007bff;
+}
+
+.apartados-content {
+  margin-top: 20px;
+}
+
+.apartados-content h2 {
+  margin-bottom: 10px;
+}

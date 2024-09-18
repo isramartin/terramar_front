@@ -51,6 +51,7 @@ const ProductDetailPage: React.FC = () => {
         <div className="product-detail-view">
             <h2>Detalles</h2>
           <ProductDetail
+           id={product.id}
             image={product.image}
             name={product.name}
             price={product.price}
