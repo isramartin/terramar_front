@@ -15,6 +15,7 @@ export function HomeClient(): JSX.Element {
     ? JSON.parse(localStorage.getItem("user")!)
     : null;
   const isLoggedIn = !!user;
+  const userName = user?.name || "Invitado";
 
   const categories = [
     { id: 1, name: 'Dama', image: image1 },
@@ -36,6 +37,8 @@ export function HomeClient(): JSX.Element {
       </div> */}
       
       <Carousel images={images} />
+
+      <h1>Bienvenido, {userName}!</h1> 
 
       <div className="content">
       <h1>Categorias</h1>

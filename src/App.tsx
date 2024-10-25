@@ -8,6 +8,7 @@ import Products from './views/products';
 import FormularioContacto from './views/formulario';
 import FormularioRegistro from './views/registro';
 import ProductDetailPage from './views/productDetail';
+import OAuthCallback from './appwrite/OAuthCallback';
 import './App.css';
 
 
@@ -16,7 +17,7 @@ function App() {
 
   const PrivateRoute = ({ children, role }: { children: JSX.Element; role: 'admin' | 'client' }) => {
     if (!user) {
-      return <Navigate to="/login" />;
+      return <Navigate to="/" />;
     }
 
     if (user.role === role) {
@@ -29,7 +30,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/callback" element={<OAuthCallback />} />
         <Route path="/home-client" element={<HomeClient />} />
         <Route path="/home-admin" element={<HomeAdmin />} />
         <Route path="/products" element={ <Products/>} />

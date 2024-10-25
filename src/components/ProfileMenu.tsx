@@ -35,7 +35,7 @@ const ProfileMenu: React.FC<ProfileMenuProps> = ({ isLoggedIn, onLogout, profile
             <button onClick={onLogout}>Logout</button>
           </>
         ) : (
-          <Link to="/login">Login</Link>
+          <Link to="/">Login</Link>
         )}
       </div>
     </div>
