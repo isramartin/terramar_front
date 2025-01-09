@@ -13,6 +13,7 @@ interface ProfileMenuProps {
 const ProfileMenu: React.FC<ProfileMenuProps> = ({ isLoggedIn, onLogout, profileImage, username }) => {
   const profileImgSrc = profileImage || defaultProfileImg;
 
+
   return (
     <div className="profile-menu">
       <div className="profile-info">

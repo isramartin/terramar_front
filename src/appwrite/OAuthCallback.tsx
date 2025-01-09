@@ -1,47 +1,32 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Client, Account } from "appwrite";
-
-// Inicializa el cliente y la cuenta una sola vez
-const client = new Client();
-client.setEndpoint("https://cloud.appwrite.io/v1").setProject("670e1fc7001519b1d314");
-const account = new Account(client);
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { account } from './appwriteConfig';
 
 const OAuthCallback = () => {
   const navigate = useNavigate();
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchUser = async () => {
+    const verifySession = async () => {
       try {
-        // Intenta obtener el usuario autenticado
         const user = await account.get();
-        
-        // Almacenar solo el ID del usuario o un token seguro
-        localStorage.setItem("userId", user.$id);
-        navigate("/home-client");
+        console.log("Usuario autenticado:", user);
+
+        // Guardar el usuario en localStorage con rol de 'client'
+        const userData = { ...user, role: 'client' };
+        localStorage.setItem('user', JSON.stringify(userData));
+
+        // Redirigir a la vista de cliente
+        navigate('/home-client');
       } catch (error) {
-        // Si hay un error, maneja el caso de usuarios no autenticados
-        console.error("Error al obtener información del usuario:", error);
-        if (error) {
-          setError("No estás autenticado. Por favor, inicia sesión.");
-        } else {
-          setError("Ocurrió un error al autenticar. Por favor, intenta nuevamente.");
-        }
-        navigate("/");
+        console.error("Error al verificar la sesión:", error);
+        navigate('/');
       }
     };
 
-    // Llama a la función para obtener el usuario
-    fetchUser();
+    verifySession();
   }, [navigate]);
 
-  return (
-    <div>
-      {error && <p>{error}</p>}
-      {!error && <p>Autenticando, por favor espera...</p>}
-    </div>
-  );
+  return <p>Autenticando, por favor espera...</p>;
 };
 
 export default OAuthCallback;
