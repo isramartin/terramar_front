@@ -6,7 +6,7 @@
 
 /* Estilo para la caja del ítem de categoría */
 .cat-item {
-  background: #ffffff;  /* Fondo blanco */
+  background: #012C4A;  /* Fondo blanco */
   border-radius: 8px;   /* Bordes redondeados */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra sutil */
   transition: background 0.3s, box-shadow 0.3s, transform 0.3s;  /* Transición suave */
@@ -15,15 +15,15 @@
   /* padding: 10px;  Espaciado interno */
   cursor: pointer;  /* Indicador de clic */
   width: 350px; /* Tamaño fijo */
-  height: 120px; /* Altura fija */
+  height: 100px; /* Altura fija */
 }
 
-/* Efecto de cambio de fondo y sombra al pasar el ratón */
+/* Efecto de cambio de fondo y sombra al pasar el ratón
 .cat-item:hover {
-  background: #ffd333;  /* Fondo amarillo al pasar el ratón */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Sombra más pronunciada */
-  transform: translateY(-5px);  /* Mueve el card hacia arriba al hacer hover */
-}
+  background: #ffd333;  Fondo amarillo al pasar el ratón 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Sombra más pronunciada 
+  transform: translateY(-5px); Mueve el card hacia arriba al hacer hover 
+} */
 
 /* Imagen dentro del ítem de categoría */
 .category-image {
@@ -37,19 +37,6 @@
 .category-title {
   margin-left: 15px;  /* Espaciado a la izquierda */
   flex: 1;  /* Ocupa el espacio restante */
-}
-
-/* Estilo para el título de la categoría */
-.category-title h6 {
-  margin: 0;  /* Elimina margen por defecto */
-  font-size: 1rem;  /* Tamaño de fuente */
-  font-weight: 600;  /* Grosor de fuente */
-}
-
-/* Estilo para el conteo de productos */
-.category-title small {
-  color: #6c757d;  /* Color de texto gris claro */
-  font-size: 0.875rem;  /* Tamaño de fuente pequeño */
 }
 
 /* Ajustes de espaciado en las columnas */
@@ -90,12 +77,12 @@
   margin: 0;  /* Elimina margen por defecto */
   font-size: 1rem;  /* Tamaño de fuente */
   font-weight: 600;  /* Grosor de fuente */
-  color: #6c757d;
+  color: #ffffff;
 }
 
 /* Estilo para el conteo de productos */
 .cat-item-info small {
-  color: #6c757d;  /* Color de texto gris claro */
+  color: #fcfcfc;  /* Color de texto gris claro */
   font-size: 0.875rem;  /* Tamaño de fuente pequeño */
 }
 

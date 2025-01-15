@@ -125,6 +125,26 @@
       "addedDate": "2024-09-10",
       "rating": 4.6,
       "reviews": 130
+    },
+    {
+      "id": 13,
+      "name": "Producto 13",
+      "price": 250,
+      "description": "Descripción del producto 2",
+      "image": "image5.png",
+      "addedDate": "2025-01-08",
+      "rating": 4.6,
+      "reviews": 130
+    },
+    {
+      "id": 14,
+      "name": "Producto 14",
+      "price": 250,
+      "description": "Descripción del producto 2",
+      "image": "image5.png",
+      "addedDate": "2025-01-10",
+      "rating": 4.6,
+      "reviews": 130
     }
   ],
     "orders": [

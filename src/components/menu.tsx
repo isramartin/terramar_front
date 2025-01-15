@@ -52,7 +52,7 @@ export function Menu(props: MenuProps): JSX.Element {
       console.log("Sesión cerrada correctamente.");
 
       // Redirige a la página de inicio de sesión
-      navigate("/");
+      navigate("/login");
     } catch (error) {
       console.error("Error al cerrar sesión:", error);
     }
@@ -62,7 +62,7 @@ export function Menu(props: MenuProps): JSX.Element {
     <nav>
       <ul>
         <li>
-          <Link to="/home-client">Home</Link>
+          <Link to="/home?=">Home</Link>
         </li>
         <li>
           <Link to="/products">View Products</Link>

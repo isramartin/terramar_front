@@ -28,8 +28,8 @@ function Login() {
     // Iniciar sesión con Google
     await account.createOAuth2Session(
       OAuthProvider.Google,
-      "https://terramar-front.onrender.com/callback", // Redirección exitosa
-      "https://terramar-front.onrender.com/" // Redirección en caso de error
+      "http://localhost:3000/callback", // Redirección exitosa
+      "http://localhost:3000/" // Redirección en caso de error
     );
 
     // Después de la redirección, verifica si el usuario está autenticado

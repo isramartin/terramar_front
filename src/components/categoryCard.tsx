@@ -4,7 +4,7 @@ import '../styles/categoryCard.css';
 interface Category {
     id: number;
     name: string;
-    image: string;
+    // image: string;
   }
   
   interface CategoryCardProps {
@@ -19,7 +19,7 @@ interface Category {
           <a className="text-decoration-none" href="#">
             <div className="cat-item d-flex align-items-center mb-4">
               <div className="cat-item-image">
-                <img src={category.image} alt={category.name} className="category-image" />
+                {/* <img src={category.image} alt={category.name} className="category-image" /> */}
               </div>
               <div className="cat-item-info">
                 <h6>{category.name}</h6>

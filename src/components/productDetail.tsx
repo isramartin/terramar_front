@@ -4,7 +4,7 @@ import '../styles/productDetail.css'; // Asegúrate de crear este archivo CSS
 import imagen1 from '../assets/image/image4.png';
 import imagen2 from '../assets/image/image5.png';
 import imagen3 from '../assets/image/image6.png';
-import Apartados from './apartados';
+import Apartados from './apartadosReview';
 
 
 const imageMap: { [key: string]: string } = {

@@ -23,16 +23,16 @@ function App() {
     if (user.role === role) {
       return children;
     } else {
-      return <Navigate to="/home-client" />;
+      return <Navigate to="/home" />;
     }
   };
 
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/callback" element={<OAuthCallback />} />
-        <Route path="/home-client" element={<HomeClient />} />
+        <Route path="/home" element={<HomeClient />} />
         <Route path="/home-admin" element={<HomeAdmin />} />
         <Route path="/products" element={ <Products/>} />
         <Route path="/productos/detalle/:id" element={ <ProductDetailPage/>} />
@@ -47,7 +47,7 @@ function App() {
             </PrivateRoute>
           } 
         />
-        <Route path="/" element={<Navigate to="/home-client" />} />
+        <Route path="/" element={<Navigate to="/home" />} />
       </Routes>
     </Router>
   );
