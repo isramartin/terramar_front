@@ -9,6 +9,7 @@ import Datos from '../assets/mockdata/Datos.json'
 import CategoryCard from "../components/categoryCard";
 import Testimonials from "../components/testiminios";
 import RecentProducts from "../components/productosRecientes";
+import TopSellingProducts from "../components/masVendido";
 
 export function HomeClient(): JSX.Element {
   const user = localStorage.getItem("user")
@@ -52,7 +53,16 @@ export function HomeClient(): JSX.Element {
         <RecentProducts />
         
         </div>
+
+        <div>
+     <h1>Lo mas vendido</h1>
+     <TopSellingProducts />
+
       </div>
+
+      </div>
+
+     
       {/* Pie de página */}
       <footer className="footer">
         <p>© 2024 Mi Tienda. Todos los derechos reservados.</p>

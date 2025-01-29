@@ -13,7 +13,8 @@
       "image": "image4.png",
       "addedDate": "2024-09-07T12:00:00Z",
       "rating": 4.5,
-      "reviews": 120
+      "reviews": 120,
+      "sales": 22
     },
     {
       "id": 2,
@@ -24,7 +25,8 @@
       "image": "image5.png",
       "addedDate": "2024-09-08T12:00:00Z",
       "rating": 4.0,
-      "reviews": 85
+      "reviews": 85,
+      "sales": 2
     },
     {
       "id": 3,
@@ -34,7 +36,8 @@
       "image": "image6.png",
       "addedDate": "2024-09-01T12:00:00Z",
       "rating": 4.8,
-      "reviews": 200
+      "reviews": 200,
+      "sales": 2
     },
     {
       "id": 4,
@@ -42,9 +45,10 @@
       "price": 250,
       "description": "Descripción del producto 2",
       "image": "image5.png",
-      "addedDate": "2024-08-01T12:00:00Z",
+      "addedDate": "2025-08-01T12:00:00Z",
       "rating": 3.9,
-      "reviews": 65
+      "reviews": 65,
+      "sales": 2
     },
     {
       "id": 5,
@@ -52,9 +56,10 @@
       "price": 250,
       "description": "Descripción del producto 2",
       "image": "image4.png",
-      "addedDate": "2024-09-09",
+      "addedDate": "2025-09-09",
       "rating": 4.7,
-      "reviews": 150
+      "reviews": 150,
+      "sales": 2
     },
     {
       "id": 6,
@@ -62,9 +67,10 @@
       "price": 250,
       "description": "Descripción del producto 2",
       "image": "image5.png",
-      "addedDate": "2024-09-08",
+      "addedDate": "2025-09-08",
       "rating": 4.5,
-      "reviews": 100
+      "reviews": 100,
+      "sales": 2
     },
     {
       "id": 7,
@@ -72,9 +78,10 @@
       "price": 250,
       "description": "Descripción del producto 2",
       "image": "image6.png",
-      "addedDate": "2024-09-10",
+      "addedDate": "2025-09-10",
       "rating": 4.9,
-      "reviews": 230
+      "reviews": 230,
+      "sales": 2
     },
     {
       "id": 8,
@@ -82,9 +89,10 @@
       "price": 250,
       "description": "Descripción del producto 2",
       "image": "image5.png",
-      "addedDate": "2024-09-10",
+      "addedDate": "2025-01-10",
       "rating": 4.3,
-      "reviews": 110
+      "reviews": 110,
+      "sales": 2
     },
     {
       "id": 9,
@@ -92,9 +100,10 @@
       "price": 250,
       "description": "Descripción del producto 2",
       "image": "image4.png",
-      "addedDate": "2024-09-10",
+      "addedDate": "2025-09-10",
       "rating": 4.6,
-      "reviews": 130
+      "reviews": 130,
+      "sales": 2
     },
     {
       "id": 10,
@@ -104,7 +113,8 @@
       "image": "image6.png",
       "addedDate": "2024-09-10",
       "rating": 4.6,
-      "reviews": 130
+      "reviews": 130,
+      "sales": 2
     },
     {
       "id": 11,
@@ -112,9 +122,10 @@
       "price": 250,
       "description": "Descripción del producto 2",
       "image": "image4.png",
-      "addedDate": "2024-09-10",
+      "addedDate": "2025-09-10",
       "rating": 4.6,
-      "reviews": 130
+      "reviews": 130,
+      "sales": 2
     },
     {
       "id": 12,
@@ -122,9 +133,10 @@
       "price": 250,
       "description": "Descripción del producto 2",
       "image": "image5.png",
-      "addedDate": "2024-09-10",
+      "addedDate": "2025-09-10",
       "rating": 4.6,
-      "reviews": 130
+      "reviews": 130,
+      "sales": 2
     },
     {
       "id": 13,
@@ -134,7 +146,8 @@
       "image": "image5.png",
       "addedDate": "2025-01-08",
       "rating": 4.6,
-      "reviews": 130
+      "reviews": 130,
+      "sales": 15
     },
     {
       "id": 14,
@@ -144,7 +157,8 @@
       "image": "image5.png",
       "addedDate": "2025-01-10",
       "rating": 4.6,
-      "reviews": 130
+      "reviews": 130,
+      "sales": 20
     }
   ],
     "orders": [

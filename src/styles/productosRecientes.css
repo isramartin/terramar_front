@@ -25,3 +25,12 @@
 .product-item .card-body {
   padding: 0;
 }
+
+.top-selling-products {
+  padding: 20px;
+}
+
+.top-selling-products h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
