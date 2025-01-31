@@ -1,78 +1,148 @@
-/* src/styles/profileMenu.css */
 .profile-menu {
-    position: relative;
-    display: inline-block;
-    align-items: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffcc00;
+}
+
+.profile-username,
+.profile-login-text {
+  color: #ffffff;
+  font-weight: bold;
+  margin: 0;
+}
+
+.dropdown-arrow {
+  display: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-left: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 100%;
+  right: -30px;
+  background-color: #01192a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  min-width: 150px;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s ease-in-out;
+}
+
+.profile-dropdown a,
+.profile-dropdown button {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.profile-dropdown a:hover,
+.profile-dropdown button:hover {
+  background-color: rgba(255, 204, 0, 0.1);
+  color: #ffcc00;
+}
+
+.profile-dropdown button {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .profile-menu:hover .profile-dropdown {
+    visibility: visible;
+    opacity: 1;
   }
-  
-  .profile-icon {
-    cursor: pointer;
+}
+
+.dropdown-arrow img {
+  width: 16px;
+  transition: transform 0.3s ease-in-out;
+  filter: invert(1) brightness(100);
+}
+
+.dropdown-arrow.active img {
+  transform: rotate(360deg);
+}
+
+@media (max-width: 991.98px) {
+  .profile-menu {
+    position: relative;
   }
 
-  .profile-info {
-    display: flex;
-    align-items: center;
-    right: inherit;
+  .profile-dropdown {
+    position: absolute;
+    top: 120%;
+    right: 0px;
+    background-color: #01192a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
   }
-  
-  .profile-login-text, 
-  .profile-username {
-    margin-right: 10px; /* Espacio entre el texto y la imagen *//* Tamaño del texto */
-    line-height: 1; /* Alineación del texto con la imagen */
+
+  .dropdown-arrow {
+    display: inline;
+  }
+
+  .dropdown-arrow {
+    font-size: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .dropdown-arrow.active {
+    transform: rotate(90deg);
+  }
+
+  .profile-dropdown.active {
+    max-height: 500px;
+    padding: 10px;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .profile-info.active .dropdown-arrow {
+    transform: rotate(90deg);
   }
 
   .profile-image {
-    width: 40px; /* Tamaño pequeño para la imagen de perfil */
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-left: auto;
+    display: none;
   }
-  
-  .profile-menu ul {
-    list-style-type: none;
-    margin: 0;
-    display: flex;
+
+  .profile-info {
+    gap: 0;
   }
-  
-  .profile-menu li {
-    margin: 5px 0;
-  }
-  
-  .profile-menu a, .profile-menu button {
-    text-decoration: none;
-    color: #333;
-  }
-  
-  .profile-dropdown {
-    display: none; /* Oculta el menú por defecto */
-    flex-direction: column;
-    position: absolute;
-    top: 60px; /* Ajusta según la altura de la imagen */
-    right: 0;
-    background-color: rgba(9, 36, 189, 0.788);
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 999999;
-  }
-  
-  .profile-menu:hover .profile-dropdown {
-    display: flex; /* Muestra el menú al hacer hover */
-  }
-  
-  .profile-dropdown a,
-  .profile-dropdown button {
-    padding: 8px 16px;
-    text-decoration: none;
-    color: black;
-    border: none;
-    background: none;
-    cursor: pointer;
-  }
-  
-  .profile-dropdown a:hover,
-  .profile-dropdown button:hover {
-    background-color: #f1f1f1;
-  }
-  
+}
