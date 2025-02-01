@@ -49,7 +49,7 @@ export function HomeClient(): JSX.Element {
       <Testimonials testimonials={Datos.testimonials} /> */}
 
 <div>
-      <h1>Productos Recientes</h1>
+      
         <RecentProducts />
         
         </div>

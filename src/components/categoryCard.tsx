@@ -1,5 +1,4 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Importa el CSS de Bootstrap
 import '../styles/categoryCard.css'; // Importa el CSS personalizado
 
 interface Category {

@@ -1,73 +1,73 @@
-/* Estilos para el diseño circular (pantallas grandes) */
+
 .category-circle {
-  width: 150px; /* Tamaño del círculo */
+  width: 150px; 
   height: 150px;
-  border-radius: 50%; /* Forma circular */
+  border-radius: 50%; 
   overflow: hidden;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #012c4a; /* Color de fondo */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  background-color: #012c4a; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efecto hover para el diseño circular */
+
 .hover-effect:hover {
-  transform: scale(1.1); /* Escala el círculo */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+  transform: scale(1.1); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
 
-/* Imagen de la categoría (diseño circular) */
+
 .category-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Cubre todo el círculo */
+  object-fit: cover; 
   transition: transform 0.5s ease;
 }
 
-/* Efecto de zoom en la imagen al hacer hover (diseño circular) */
+
 .hover-effect:hover .category-image {
-  transform: scale(1.2); /* Zoom en la imagen */
+  transform: scale(1.2); 
 }
 
-/* Placeholder para cuando no hay imagen (diseño circular) */
+
 .no-image-placeholder {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #6c757d; /* Color de fondo gris */
+  background-color: #6c757d; 
   color: #fff;
   font-size: 1rem;
   text-align: center;
   padding: 10px;
 }
 
-/* Superposición de texto (diseño circular) */
+
 .category-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+  background: rgba(0, 0, 0, 0.6); 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  opacity: 0; /* Inicialmente invisible */
+  opacity: 0; 
   transition: opacity 0.3s ease;
 }
 
-/* Mostrar superposición al hacer hover (diseño circular) */
+
 .hover-effect:hover .category-overlay {
-  opacity: 1; /* Hace visible la superposición */
+  opacity: 1; 
 }
 
-/* Estilos para el título y subtítulo (diseño circular) */
+
 .category-title {
   font-size: 1.1rem;
   font-weight: 600;
@@ -82,61 +82,61 @@
   margin: 0;
 }
 
-/* Estilos para el diseño mejorado en móviles */
+
 .category-card-mobile {
   width: 100%;
-  height: 120px; /* Altura fija para el diseño móvil */
-  border-radius: 12px; /* Bordes redondeados */
+  height: 120px; 
+  border-radius: 12px; 
   overflow: hidden;
   position: relative;
   display: flex;
   align-items: center;
-  background-color: #012c4a; /* Color de fondo */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  background-color: #012c4a; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efecto hover para el diseño móvil */
+
 .category-card-mobile:hover {
-  transform: translateY(-5px); /* Levanta la tarjeta */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
 
-/* Imagen de la categoría (diseño móvil) */
+
 .category-image-mobile {
-  width: 120px; /* Ancho fijo para la imagen */
+  width: 120px; 
   height: 100%;
-  object-fit: cover; /* Cubre todo el espacio */
-  border-radius: 12px 0 0 12px; /* Bordes redondeados solo en el lado izquierdo */
+  object-fit: cover; 
+  border-radius: 12px 0 0 12px; 
 }
 
-/* Placeholder para cuando no hay imagen (diseño móvil) */
+
 .no-image-placeholder-mobile {
   width: 120px;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #6c757d; /* Color de fondo gris */
+  background-color: #6c757d; 
   color: #fff;
   font-size: 1rem;
   text-align: center;
   padding: 10px;
-  border-radius: 12px 0 0 12px; /* Bordes redondeados solo en el lado izquierdo */
+  border-radius: 12px 0 0 12px; 
 }
 
-/* Información de la categoría (diseño móvil) */
+
 .category-info-mobile {
   flex: 1;
   padding: 0 1rem;
-  background: linear-gradient(90deg, rgba(1, 44, 74, 0.8), rgba(1, 44, 74, 1)); /* Degradado */
+  background: linear-gradient(90deg, rgba(1, 44, 74, 0.8), rgba(1, 44, 74, 1)); 
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-/* Título de la categoría (diseño móvil) */
+
 .category-title-mobile {
   font-size: 1.1rem;
   font-weight: 600;
@@ -144,21 +144,21 @@
   margin: 0;
 }
 
-/* Subtítulo de la categoría (diseño móvil) */
+
 .category-subtitle-mobile {
   font-size: 0.875rem;
   color: #adb5bd;
   margin: 0;
 }
 
-/* Ajustes para pantallas pequeñas (móviles) */
+
 @media (max-width: 576px) {
   .category-card-mobile {
-    height: 100px; /* Altura más pequeña en móviles */
+    height: 100px; 
   }
 
   .category-image-mobile {
-    width: 100px; /* Ancho más pequeño en móviles */
+    width: 100px; 
   }
 
   .no-image-placeholder-mobile {
@@ -166,10 +166,10 @@
   }
 
   .category-title-mobile {
-    font-size: 1rem; /* Tamaño de fuente más pequeño en móviles */
+    font-size: 1rem; 
   }
 
   .category-subtitle-mobile {
-    font-size: 0.75rem; /* Tamaño de fuente más pequeño en móviles */
+    font-size: 0.75rem; 
   }
 }
