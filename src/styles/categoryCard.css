@@ -1,94 +1,175 @@
-.category-card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* Espaciado entre las tarjetas */
-}
-
-/* Estilo para la caja del ítem de categoría */
-.cat-item {
-  background: #012C4A;  /* Fondo blanco */
-  border-radius: 8px;   /* Bordes redondeados */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra sutil */
-  transition: background 0.3s, box-shadow 0.3s, transform 0.3s;  /* Transición suave */
-  display: flex;
-  /* align-items: center; */
-  /* padding: 10px;  Espaciado interno */
-  cursor: pointer;  /* Indicador de clic */
-  width: 350px; /* Tamaño fijo */
-  height: 100px; /* Altura fija */
-}
-
-/* Efecto de cambio de fondo y sombra al pasar el ratón
-.cat-item:hover {
-  background: #ffd333;  Fondo amarillo al pasar el ratón 
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Sombra más pronunciada 
-  transform: translateY(-5px); Mueve el card hacia arriba al hacer hover 
-} */
-
-/* Imagen dentro del ítem de categoría */
-.category-image {
-  width: 200px;
-  height: 100%;  /* La altura de la imagen se ajusta a la del contenedor */
-  object-fit: cover;  /* Ajusta la imagen para que se ajuste al contenedor */
-  /* border-radius: 8px;  Bordes redondeados en la imagen */
-}
-
-/* Contenedor para el texto de la categoría */
-.category-title {
-  margin-left: 15px;  /* Espaciado a la izquierda */
-  flex: 1;  /* Ocupa el espacio restante */
-}
-
-/* Ajustes de espaciado en las columnas */
-.col-lg-3, .col-md-4, .col-sm-6 {
-  display: flex;
-  justify-content: center; /* Centra las tarjetas en su columna */
-  padding: 0 15px;  /* Espaciado horizontal */
-}
-
-.cat-item-image {
-  flex: 0 0 30%;  /* Ocupa el 20% del contenedor */
+/* Estilos para el diseño circular (pantallas grandes) */
+.category-circle {
+  width: 150px; /* Tamaño del círculo */
+  height: 150px;
+  border-radius: 50%; /* Forma circular */
+  overflow: hidden;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  height: 100%;  /* La altura del contenedor es igual a la del card */
+  background-color: #012c4a; /* Color de fondo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Imagen dentro del contenedor */
+/* Efecto hover para el diseño circular */
+.hover-effect:hover {
+  transform: scale(1.1); /* Escala el círculo */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+/* Imagen de la categoría (diseño circular) */
 .category-image {
-  width: 150px;
+  width: 100%;
   height: 100%;
-  object-fit: cover;  /* Ajusta la imagen para que se ajuste al contenedor */
+  object-fit: cover; /* Cubre todo el círculo */
+  transition: transform 0.5s ease;
 }
 
-/* Contenedor de la información dentro del ítem de categoría */
-.cat-item-info {
-  flex: 1;  /* Ocupa el espacio restante */
-  padding-left: 15px;  /* Espaciado a la izquierda */
+/* Efecto de zoom en la imagen al hacer hover (diseño circular) */
+.hover-effect:hover .category-image {
+  transform: scale(1.2); /* Zoom en la imagen */
+}
+
+/* Placeholder para cuando no hay imagen (diseño circular) */
+.no-image-placeholder {
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;  /* Organiza el contenido verticalmente */
-  justify-content: center;  /* Centra el contenido verticalmente */
-  text-align: left;  /* Alinea el texto a la izquierda */
+  align-items: center;
+  justify-content: center;
+  background-color: #6c757d; /* Color de fondo gris */
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  padding: 10px;
 }
 
-/* Estilo para el título de la categoría */
-.cat-item-info h6 {
-  margin: 0;  /* Elimina margen por defecto */
-  font-size: 1rem;  /* Tamaño de fuente */
-  font-weight: 600;  /* Grosor de fuente */
-  color: #ffffff;
-}
-
-/* Estilo para el conteo de productos */
-.cat-item-info small {
-  color: #fcfcfc;  /* Color de texto gris claro */
-  font-size: 0.875rem;  /* Tamaño de fuente pequeño */
-}
-
-/* Ajustes de espaciado en las columnas */
-.col-lg-3, .col-md-4, .col-sm-6 {
+/* Superposición de texto (diseño circular) */
+.category-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
   display: flex;
-  justify-content: center; /* Centra las tarjetas en su columna */
-  padding: 0 15px;  /* Espaciado horizontal */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Inicialmente invisible */
+  transition: opacity 0.3s ease;
+}
+
+/* Mostrar superposición al hacer hover (diseño circular) */
+.hover-effect:hover .category-overlay {
+  opacity: 1; /* Hace visible la superposición */
+}
+
+/* Estilos para el título y subtítulo (diseño circular) */
+.category-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+}
+
+.category-subtitle {
+  font-size: 0.875rem;
+  color: #adb5bd;
+  margin: 0;
+}
+
+/* Estilos para el diseño mejorado en móviles */
+.category-card-mobile {
+  width: 100%;
+  height: 120px; /* Altura fija para el diseño móvil */
+  border-radius: 12px; /* Bordes redondeados */
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #012c4a; /* Color de fondo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover para el diseño móvil */
+.category-card-mobile:hover {
+  transform: translateY(-5px); /* Levanta la tarjeta */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+/* Imagen de la categoría (diseño móvil) */
+.category-image-mobile {
+  width: 120px; /* Ancho fijo para la imagen */
+  height: 100%;
+  object-fit: cover; /* Cubre todo el espacio */
+  border-radius: 12px 0 0 12px; /* Bordes redondeados solo en el lado izquierdo */
+}
+
+/* Placeholder para cuando no hay imagen (diseño móvil) */
+.no-image-placeholder-mobile {
+  width: 120px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6c757d; /* Color de fondo gris */
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  padding: 10px;
+  border-radius: 12px 0 0 12px; /* Bordes redondeados solo en el lado izquierdo */
+}
+
+/* Información de la categoría (diseño móvil) */
+.category-info-mobile {
+  flex: 1;
+  padding: 0 1rem;
+  background: linear-gradient(90deg, rgba(1, 44, 74, 0.8), rgba(1, 44, 74, 1)); /* Degradado */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Título de la categoría (diseño móvil) */
+.category-title-mobile {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+/* Subtítulo de la categoría (diseño móvil) */
+.category-subtitle-mobile {
+  font-size: 0.875rem;
+  color: #adb5bd;
+  margin: 0;
+}
+
+/* Ajustes para pantallas pequeñas (móviles) */
+@media (max-width: 576px) {
+  .category-card-mobile {
+    height: 100px; /* Altura más pequeña en móviles */
+  }
+
+  .category-image-mobile {
+    width: 100px; /* Ancho más pequeño en móviles */
+  }
+
+  .no-image-placeholder-mobile {
+    width: 100px;
+  }
+
+  .category-title-mobile {
+    font-size: 1rem; /* Tamaño de fuente más pequeño en móviles */
+  }
+
+  .category-subtitle-mobile {
+    font-size: 0.75rem; /* Tamaño de fuente más pequeño en móviles */
+  }
 }
