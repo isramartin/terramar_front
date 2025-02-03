@@ -55,7 +55,7 @@ export function HomeClient(): JSX.Element {
         </div>
 
         <div>
-     <h1>Lo mas vendido</h1>
+  
      <TopSellingProducts />
 
       </div>
